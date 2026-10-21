@@ -2,36 +2,36 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "Astro Sphere",
-  DESCRIPTION: "Welcome to Astro Sphere, a portfolio and blog for designers and developers.",
-  AUTHOR: "Mark Horn",
+  TITLE: "Lynxsoft",
+  DESCRIPTION: "Software Development & Technical Consulting by Nicolas Luyckx.",
+  AUTHOR: "Nicolas Luyckx",
 }
 
 // Work Page
 export const WORK: Page = {
   TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
+  DESCRIPTION: "Overview of professional engagements, software consulting, and technical leadership.",
 }
 
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
-  DESCRIPTION: "Writing on topics I am passionate about.",
+  DESCRIPTION: "Articles on software engineering, modeling & simulation platforms, and quantitative tools.",
 }
 
 // Projects Page 
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
+  DESCRIPTION: "Software solutions, simulation frameworks, and open-source packages maintained by Lynxsoft.",
 }
 
 // Search Page
 export const SEARCH: Page = {
   TITLE: "Search",
-  DESCRIPTION: "Search all posts and projects by keyword.",
+  DESCRIPTION: "Search all articles, packages, and projects by keyword.",
 }
 
-// Links
+// Links (Header Navigation)
 export const LINKS: Links = [
   { 
     TEXT: "Home", 
@@ -51,31 +51,24 @@ export const LINKS: Links = [
   },
 ]
 
-// Socials
+// Socials & Contact
 export const SOCIALS: Socials = [
   { 
     NAME: "Email",
     ICON: "email", 
-    TEXT: "markhorn.dev@gmail.com",
-    HREF: "mailto:markhorn.dev@gmail.com",
+    TEXT: "nicolas.luyckx@lynxsoft.be",
+    HREF: "mailto:nicolas.luyckx@lynxsoft.be",
   },
   { 
     NAME: "Github",
     ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
+    TEXT: "lynxsoft-labs",
+    HREF: "https://github.com/lynxsoft-labs",
   },
   { 
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "markhorn-dev",
-    HREF: "https://www.linkedin.com/in/markhorn-dev/",
-  },
-  { 
-    NAME: "Twitter",
-    ICON: "twitter-x",
-    TEXT: "markhorn_dev",
-    HREF: "https://twitter.com/markhorn_dev",
+    TEXT: "Nicolas Luyckx",
+    HREF: "https://www.linkedin.com/in/nicolas-luyckx-92547332/",
   },
 ]
-
