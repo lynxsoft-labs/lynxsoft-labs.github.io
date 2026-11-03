@@ -16,7 +16,7 @@ export const WORK: Page = {
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
-  DESCRIPTION: "Articles on software engineering, modeling & simulation platforms, and quantitative tools.",
+  DESCRIPTION: "Articles on software engineering, modeling & simulation platforms, and other tools.",
 }
 
 // Projects Page 
