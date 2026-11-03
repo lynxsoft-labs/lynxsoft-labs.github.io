@@ -2,7 +2,7 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "Lynxsoft",
+  TITLE: "LYNXSOFT",
   DESCRIPTION: "Software Development & Technical Consulting by Nicolas Luyckx.",
   AUTHOR: "Nicolas Luyckx",
 }
@@ -22,7 +22,7 @@ export const BLOG: Page = {
 // Projects Page 
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Software solutions, simulation frameworks, and open-source packages maintained by Lynxsoft.",
+  DESCRIPTION: "Software solutions, simulation frameworks, and open-source packages maintained by LYNXSOFT.",
 }
 
 // Search Page
