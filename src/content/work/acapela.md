@@ -1,8 +1,8 @@
 ---
 company: "Acapela Group"
 role: "Software Engineer — Voice Creation Platform"
-dateStart: "01/01/2011"
-dateEnd: "12/31/2012"
+dateStart: "2011-09-01"
+dateEnd: "2012-06-30"
 ---
 
 Engineered web server software for synthetic voice generation and Text-to-Speech (TTS) processing.

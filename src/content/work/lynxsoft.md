@@ -1,7 +1,7 @@
 ---
 company: "Lynxsoft SRL"
 role: "Freelance Software Engineer & Scientific IT Consultant"
-dateStart: "02/01/2021"
+dateStart: "2021-01-02"
 dateEnd: "Current"
 ---
 

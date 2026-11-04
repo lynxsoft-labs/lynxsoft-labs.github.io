@@ -1,8 +1,8 @@
 ---
 company: "Infrabel (via Akka-Benelux)"
 role: "Project Leader — Mobile Equipment Testing App"
-dateStart: "01/01/2014"
-dateEnd: "12/31/2017"
+dateStart: "2015-01-01"
+dateEnd: "2017-06-30"
 ---
 
 Led technical feasibility studies and software deployment to digitize railway equipment field testing for Belgium's railway infrastructure manager.

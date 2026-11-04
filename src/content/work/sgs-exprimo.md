@@ -1,8 +1,8 @@
 ---
 company: "SGS Exprimo"
 role: "IT Scientist (Modelling & Simulation)"
-dateStart: "01/01/2017"
-dateEnd: "12/31/2020"
+dateStart: "2017-09-01"
+dateEnd: "2020-12-31"
 ---
 
 Developed modeling and simulation software, optimized simulation engines, and managed high-performance computing infrastructure for pharmacometrics workflows.

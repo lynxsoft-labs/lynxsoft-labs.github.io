@@ -1,8 +1,8 @@
 ---
 company: "Infrabel (via Akka-Benelux)"
 role: "Software Engineer & Business Analyst — ETCS Tools"
-dateStart: "01/01/2012"
-dateEnd: "12/31/2014"
+dateStart: "2012-07-01"
+dateEnd: "2014-12-31"
 ---
 
 Engineered automated signaling software tools for the European Train Control System (ETCS Level 1) across the Belgian railway network.

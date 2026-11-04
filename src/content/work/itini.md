@@ -1,8 +1,8 @@
 ---
 company: "itini"
 role: "Founder & Lead Developer"
-dateStart: "01/01/2016"
-dateEnd: "12/31/2017"
+dateStart: "2016-07-01"
+dateEnd: "2016-09-01"
 ---
 
 Founded and engineered an independent mobile application and web platform for outdoor navigation and GPS tracking.

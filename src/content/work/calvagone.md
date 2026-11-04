@@ -1,8 +1,8 @@
 ---
 company: "Calvagone (via Lynxsoft SRL)"
 role: "Senior Pharmacometrics Developer & IT Consultant"
-dateStart: "01/01/2021"
-dateEnd: "31/10/2026"
+dateStart: "2021-01-01"
+dateEnd: "2026-10-29"
 ---
 
 Independent consulting engagement delivering specialized software engineering, open-source tool development, and IT architecture in modelling and simulation.
