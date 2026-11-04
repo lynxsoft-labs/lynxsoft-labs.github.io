@@ -1,101 +1,114 @@
 ---
-import { SITE, LINKS } from "@consts"
-import { cn } from "@lib/utils"
-const { pathname } = Astro.url
+import {SITE, LINKS} from "@consts"
+import {cn} from "@lib/utils"
+const {pathname} = Astro.url
 const subpath = pathname.match(/[^/]+/g)
 import Container from "@components/Container.astro"
 ---
 
 <header id="header" class="fixed top-0 w-full h-16 z-50 ">
-  <Container size="md">
-    <div class="relative h-full w-full">
-      <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
-        <a href="/" class="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
-          <img src="/brand.svg" alt={SITE.TITLE} class="size-6 object-contain" />
-          <div>
-            {SITE.TITLE}
-          </div>
-        </a>
-      </div>
+    <Container size="md">
+        <div class="relative h-full w-full">
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 flex gap-1 font-semibold">
+                <a href="/"
+                   class="flex gap-1 text-current hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+                    <!-- Expanded viewBox from 0 0 24 24 to 0 0 50 50 so the full path is visible -->
+                    <svg class="size-6 object-contain fill-black dark:fill-white" viewBox="0 0 50 50"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                style="stroke-width:0.263175"
+                                d="m 18.200818,40.525225 c -0.14553,-0.09387 -0.006,-0.344472 0.52152,-0.933903 0.5894,-0.659092 0.95094,-1.253882 1.1535,-1.897684 0.2057,-0.653746 0.2225,-2.263456 0.0309,-2.959355 -0.44457,-1.614659 -1.78402,-3.277648 -3.94884,-4.902647 -0.55531,-0.416835 -1.017197,-0.776801 -1.026407,-0.799928 -0.0195,-0.04899 0.656467,-0.487344 1.061217,-0.688158 0.51519,-0.2556 1.47852,-0.451406 2.26304,-0.45999 0.92452,-0.01009 1.0043,0.02759 2.45092,1.157511 2.00226,1.563936 2.89708,2.005085 4.07233,2.007646 0.71202,0.0013 1.16631,-0.115563 1.86516,-0.480843 0.65436,-0.342019 1.23426,-0.920402 1.50682,-1.502846 0.32541,-0.695388 0.23018,-0.782638 -0.57579,-0.527492 -1.57097,0.497315 -3.05173,0.450397 -4.47415,-0.141761 -0.5124,-0.213313 -0.95352,-0.568713 -0.81338,-0.655318 0.0409,-0.02529 0.34897,0.04822 0.68462,0.163349 1.39996,0.480089 3.76144,0.310731 4.86516,-0.348923 0.52349,-0.312871 0.79342,-0.682053 0.79342,-1.085165 0,-0.421983 -0.17296,-0.721772 -0.83174,-1.441673 -0.76448,-0.835406 -0.77493,-0.858929 -0.40437,-0.909985 0.16285,-0.02242 0.8131,-0.06707 1.44501,-0.09917 1.2241,-0.06221 1.50864,-0.134711 1.57562,-0.401557 0.066,-0.262843 -0.0622,-0.511513 -0.90192,-1.749868 -1.22641,-1.808633 -1.57409,-2.647967 -1.57823,-3.809955 -0.004,-1.144349 -0.34562,-2.107165 -1.0254,-2.89064 -1.92793,-2.221993 -5.57459,-4.152249 -9.87264,-5.2257871 -0.65106,-0.162614 -1.20902,-0.317679 -1.23992,-0.344587 -0.0309,-0.02689 0.13985,-0.12223 0.37943,-0.211831 0.82,-0.306655 2.00287,-1.35144 2.78108,-2.456414 0.39964,-0.567435 0.52487,-0.933219 0.58152,-1.698524 0.0504,-0.681056 0.0268,-1.6566461 0.11894,-1.5463331 0.9505,1.1373031 0.43216,0.8903831 0.44647,-0.289309 l 0.0137,-1.13314 0.74621,1.464825 c 0.53423,1.0487121 0.36916,0.9316741 0.71875,1.6599931 0.3496,0.728325 0.74838,1.635685 0.88618,2.01637 0.54154,1.496043 0.75414,2.7521861 0.46579,2.7521861 -0.1868,0 -0.76071,-0.8041361 -1.8512,-2.5937811 -0.29754,-0.48829 -0.55175,-0.887803 -0.56493,-0.887803 -0.0866,0 -2.05461,2.402445 -2.05461,2.508179 0,0.08285 0.60206,0.31508 1.51073,0.582731 1.03607,0.3051741 2.28223,0.8419141 3.58632,1.5446731 1.94542,1.048367 2.93126,1.715021 3.74674,2.533636 0.73467,0.737516 1.21406,1.449663 1.5148,2.250318 0.20047,0.533707 0.24082,0.752512 0.30221,1.638751 0.0733,1.058324 0.1818,1.583262 0.42686,2.065184 0.0785,0.154343 0.49471,0.828968 0.92497,1.499173 0.99852,1.555409 1.24398,2.037363 1.19411,2.344658 -0.0933,0.575169 -0.88374,1.879577 -1.63365,2.695995 -0.58844,0.640644 -0.70317,0.910563 -0.78064,1.836661 -0.0689,0.823904 -0.18165,1.258155 -0.4698,1.809713 -0.73437,1.405644 -2.25404,2.273042 -3.77098,2.152402 -0.92589,-0.07363 -1.71054,-0.348815 -4.26021,-1.494102 -1.06647,-0.479049 -2.01387,-0.850262 -2.17,-0.850262 -0.13346,0 0.36088,0.470522 1.20154,1.143639 1.11286,0.89108 1.71168,1.609799 2.19483,2.63428 0.66832,1.417154 0.68171,2.898604 0.0379,4.194907 -0.52835,1.06383 -1.29019,1.773869 -2.54606,2.372964 -0.81075,0.386752 -1.12712,0.483391 -1.27348,0.388994 z M 11.75413,35.984026 c -2.1700558,-0.735159 -3.5429158,-1.355074 -4.8528758,-2.19133 -3.05328,-1.949142 -5.056712,-4.919419 -5.607774,-8.314031 -0.145785,-0.898047 -0.125875,-2.541128 0.04275,-3.527448 0.25656,-1.500719 0.91249,-3.137744 1.793524,-4.476162 0.471167,-0.715775 0.86191,-1.194191 1.85638,-2.272883 0.4239,-0.459811 0.82739,-0.902972 0.89665,-0.984806 0.12207,-0.144258 0.11912,-0.181391 -0.0966,-1.218122 -0.19459,-0.93504 -0.22257,-1.204857 -0.22282,-2.148614 -3.7e-4,-1.4629411 0.17899,-2.4692711 0.655,-3.6748811 0.27131,-0.687156 0.2603,-0.811999 -0.11189,-1.268968 -0.47411,-0.58208 -0.71852,-0.935468 -0.90823,-1.313164 -0.17655,-0.3515161 -0.22421,-0.6365211 -0.10642,-0.6365211 0.0363,0 0.41643,0.3916771 0.84465,0.8703991 0.42823,0.478716 0.78871,0.870393 0.80108,0.870393 0.0124,0 -0.19221,-0.43961 -0.4546,-0.976912 -0.58855,-1.2051251 -0.78332,-1.8814291 -0.75532,-2.6227451 l 0.0204,-0.539257 0.34489,0.650298 c 0.88533,1.669317 2.34026,3.1321431 7.4225058,7.4627501 1.499631,1.2778391 2.572908,2.2701371 2.572908,2.3787891 0,0.139986 -0.687837,0.0032 -1.194564,-0.237825 C 13.48843,11.240058 12.28155,10.385805 10.165644,8.6079049 8.6606242,7.3432999 8.0516342,6.8816239 7.8885342,6.8816239 c -0.5038,0 -0.82034,0.835214 -0.9843,2.597217 -0.12609,1.3548251 0.0962,3.0590141 0.59367,4.5519731 0.28611,0.858629 0.55614,1.405153 1.05192,2.129072 0.20644,0.301437 0.37535,0.577545 0.37535,0.613573 0,0.210362 -0.39556,0.0075 -1.6032,-0.822307 -0.34835,-0.239364 -0.70365,-0.435203 -0.78955,-0.435203 -0.23454,0 -0.69467,0.3723 -1.05889,0.856757 -1.55218,2.064591 -2.306869,6.440678 -1.63871,9.502088 0.49829,2.283053 1.86128,4.651815 3.78169,6.572223 1.15773,1.157722 2.26727,1.964247 4.0355058,2.93338 1.3064,0.716018 1.65995,0.934529 1.65995,1.025924 0,0.03781 -0.0244,0.06876 -0.0542,0.06876 -0.0298,0 -0.70642,-0.22097 -1.50363,-0.491055 z M 7.1146842,27.501451 c 0,-3.129394 0.4188,-4.308902 2.08721,-5.878426 1.4154158,-1.331519 3.1273858,-2.132354 5.0152158,-2.346043 0.363834,-0.0412 0.739771,-0.09212 0.835441,-0.113187 0.325327,-0.07167 0.0744,0.06221 -0.921011,0.491272 -1.16696,0.503044 -2.30736,1.154082 -3.04366,1.737593 -0.942816,0.747166 -2.0776958,2.013713 -1.9997358,2.231739 0.042,0.117383 0.43137,0.05397 1.4733058,-0.239971 1.44716,-0.408244 1.78292,-0.453259 3.34231,-0.448092 1.479808,0.0051 2.162538,0.08691 3.473758,0.417237 0.84732,0.213466 2.48627,0.749963 2.86273,0.937097 l 0.27853,0.138446 -0.27853,-0.0387 c -0.15319,-0.02127 -0.79554,-0.161458 -1.42745,-0.311509 -1.85142,-0.439617 -2.34809,-0.509763 -3.620837,-0.511398 -2.731751,-0.0032 -5.129607,0.873785 -6.5897668,2.410946 -0.58228,0.612983 -0.84536,1.053551 -1.17818,1.972956 -0.13692,0.378258 -0.26253,0.701328 -0.27914,0.717934 -0.0166,0.0166 -0.0302,-0.508952 -0.0302,-1.167903 z M 18.360198,25.748603 c 0.19148,-0.02983 0.59883,-0.05422 0.90521,-0.05422 0.30638,0 0.71372,0.0244 0.90521,0.05422 0.23607,0.03679 -0.0554,0.05422 -0.90521,0.05422 -0.84984,0 -1.14128,-0.01744 -0.90521,-0.05422 z m 6.5211,-3.854049 c -1.04965,-0.726767 -1.35466,-0.816642 -3.20593,-0.944678 -1.34151,-0.09278 -1.39886,-0.122665 -2.61886,-1.364629 -1.13811,-1.158616 -1.73498,-1.691243 -2.00191,-1.786426 -0.21702,-0.07739 -0.25795,-0.292381 -0.0696,-0.365772 0.48539,-0.189164 3.42167,-0.143256 4.23013,0.06613 0.90686,0.234881 1.65262,0.745372 2.31681,1.5859 0.3725,0.471403 1.90788,2.7324 2.07516,3.055885 0.16063,0.310635 2e-5,0.256104 -0.72577,-0.246415 z m -2.83062,-1.164518 c 0.60769,-0.168318 0.86895,-0.571146 0.48414,-0.746483 -0.0975,-0.04445 -0.44018,-0.08081 -0.76141,-0.08081 -0.32124,0 -0.66463,-0.03066 -0.76309,-0.06807 -0.0985,-0.03743 -0.49178,-0.388784 -0.87403,-0.780773 -0.74117,-0.760061 -0.84999,-0.798925 -0.84999,-0.303584 0,0.617086 1.04451,1.684914 1.9139,1.956621 0.36962,0.115512 0.50366,0.119152 0.85048,0.02312 z m 1.88577,-3.213537 c -0.46789,-0.798388 -1.33009,-2.790878 -1.2581,-2.907366 0.16161,-0.261495 0.94387,0.727692 1.356,1.714708 0.27235,0.652239 0.3776,1.489957 0.1872,1.489957 -0.061,0 -0.18927,-0.133784 -0.2851,-0.297299 z M 10.405294,14.650883 c -0.23908,-0.08883 -0.4837298,-0.2022 -0.5436598,-0.25194 -0.23949,-0.198757 -0.44992,-0.697521 -0.61571,-1.459364 -0.0958,-0.440421 -0.23856,-0.985841 -0.31717,-1.212049 -0.0786,-0.226201 -0.14291,-0.422039 -0.14291,-0.435196 0,-0.117792 0.34273,0.09709 1.2668098,0.794256 0.596446,0.449994 1.297526,0.945118 1.557956,1.100273 0.89086,0.530736 0.60066,0.592171 -0.80545,0.170508 -1.0654058,-0.319493 -1.2533658,-0.340742 -1.2533658,-0.141691 0,0.211588 0.36813,0.582361 1.0133658,1.020655 0.83451,0.56686 0.76127,0.756778 -0.159866,0.414548 z"
+                                id="path1"/>
+                    </svg>
+                    <div>
+                        {SITE.TITLE}
+                    </div>
+                </a>
+            </div>
 
-    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-      <nav class="hidden md:flex items-center justify-center text-sm gap-1">
-        {
-          LINKS.map((LINK) => (
-            <a href={LINK.HREF} class={cn("h-8 rounded-full px-3 text-current", "flex items-center justify-center", "transition-colors duration-300 ease-in-out", pathname === LINK.HREF || "/" + subpath?.[0] === LINK.HREF ? "bg-black dark:bg-white text-white dark:text-black" : "hover:bg-black/5 dark:hover:bg-white/20 hover:text-black dark:hover:text-white")}>
-              {LINK.TEXT}
-            </a>
-          ))
-        }
-      </nav>
-    </div>
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <nav class="hidden md:flex items-center justify-center text-sm gap-1">
+                    {
+                        LINKS.map((LINK) => (
+                                <a href={LINK.HREF}
+                                   class={cn("h-8 rounded-full px-3 text-current", "flex items-center justify-center", "transition-colors duration-300 ease-in-out", pathname === LINK.HREF || "/" + subpath?.[0] === LINK.HREF ? "bg-black dark:bg-white text-white dark:text-black" : "hover:bg-black/5 dark:hover:bg-white/20 hover:text-black dark:hover:text-white")}>
+                                    {LINK.TEXT}
+                                </a>
+                        ))
+                    }
+                </nav>
+            </div>
 
-    <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
-      <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
-        <svg class="size-full">
-          <use href="/ui.svg#search"></use>
-        </svg>
-      </a>
+            <div class="buttons absolute right-0 top-1/2 -translate-y-1/2 flex gap-1">
+                <a href="/search" aria-label={`Search blog posts and projects on ${SITE.TITLE}`}
+                   class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out", pathname === "/search" || "/" + subpath?.[0] === "/search" ? "pointer-events-none bg-black dark:bg-white text-white dark:text-black" : "")}>
+                    <svg class="size-full">
+                        <use href="/ui.svg#search"></use>
+                    </svg>
+                </a>
 
-      <a href="/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg class="size-full">
-          <use href="/ui.svg#rss"></use>
-        </svg>
-      </a>
+                <a href="/rss.xml" target="_blank" aria-label={`Rss feed for ${SITE.TITLE}`}
+                   class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+                    <svg class="size-full">
+                        <use href="/ui.svg#rss"></use>
+                    </svg>
+                </a>
 
-      <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg class="size-full block dark:hidden">
-          <use href="/ui.svg#sun"></use>
-        </svg>
-        <svg class="size-full hidden dark:block">
-          <use href="/ui.svg#moon"></use>
-        </svg>
-      </button>
+                <button id="header-theme-button" aria-label={`Toggle light and dark theme`}
+                        class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+                    <svg class="size-full block dark:hidden">
+                        <use href="/ui.svg#sun"></use>
+                    </svg>
+                    <svg class="size-full hidden dark:block">
+                        <use href="/ui.svg#moon"></use>
+                    </svg>
+                </button>
 
-      <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg id="drawer-open" class="size-full">
-          <use href="/ui.svg#menu"></use>
-        </svg>
-        <svg id="drawer-close" class="size-full">
-          <use href="/ui.svg#x"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-  </Container>
+                <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`}
+                        class={cn("flex md:hidden", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+                    <svg id="drawer-open" class="size-full">
+                        <use href="/ui.svg#menu"></use>
+                    </svg>
+                    <svg id="drawer-close" class="size-full">
+                        <use href="/ui.svg#x"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </Container>
 </header>
 
 <style>
-  #header-drawer-button > #drawer-open {
-    @apply block;
-  }
+    #header-drawer-button > #drawer-open {
+        @apply block;
+    }
 
-  #header-drawer-button > #drawer-close {
-    @apply hidden;
-  }
+    #header-drawer-button > #drawer-close {
+        @apply hidden;
+    }
 
-  #header-drawer-button.open > #drawer-open {
-    @apply hidden;
-  }
+    #header-drawer-button.open > #drawer-open {
+        @apply hidden;
+    }
 
-  #header-drawer-button.open > #drawer-close {
-    @apply block;
-  }
+    #header-drawer-button.open > #drawer-close {
+        @apply block;
+    }
 </style>
 
 <script is:inline>
-  function toggleDrawer() {
-    const drawer = document.getElementById("drawer")
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawer?.classList.toggle("open")
-    drawerButton?.classList.toggle("open")
-  }
+    function toggleDrawer() {
+        const drawer = document.getElementById("drawer")
+        const drawerButton = document.getElementById("header-drawer-button")
+        drawer?.classList.toggle("open")
+        drawerButton?.classList.toggle("open")
+    }
 
-  function initializeDrawerButton() {
-    const drawerButton = document.getElementById("header-drawer-button")
-    drawerButton?.addEventListener("click", toggleDrawer)
-  }
+    function initializeDrawerButton() {
+        const drawerButton = document.getElementById("header-drawer-button")
+        drawerButton?.addEventListener("click", toggleDrawer)
+    }
 
-  document.addEventListener("astro:after-swap", initializeDrawerButton)
-  initializeDrawerButton()
+    document.addEventListener("astro:after-swap", initializeDrawerButton)
+    initializeDrawerButton()
 </script>
