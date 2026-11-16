@@ -14,7 +14,7 @@ With the recent migration of the Campsis ecosystem to the dedicated **[campsisve
 
 ### Transitioning Forward
 
-After a fantastic multi-year collaboration, my professional relationship with Calvagone has come to a close, and I no longer work with them. I want to express my gratitude for the journey we shared and the milestones we achieved together in advancing modeling and simulation tools.
+After a fantastic multi-year collaboration, my professional relationship with Calvagone has come to a close. I want to express my gratitude for the journey we shared and the milestones we achieved together in advancing modeling and simulation tools.
 
 However, this transition opens an exciting new chapter. I am fully committed to remaining an independent software engineer and consultant, with a primary focus on maintaining, supporting, and further extending the **Campsis** suite. 
 
